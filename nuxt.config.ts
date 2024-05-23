@@ -1,3 +1,6 @@
+const environment = process.env.NODE_ENV;
+const envSettings = require(`./env.${environment}.js`); 
+
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify';
 export default defineNuxtConfig({
     runtimeConfig: {
@@ -8,7 +11,7 @@ export default defineNuxtConfig({
 
     app: {
         head: {
-            title: 'Nuxt Auth',
+            title: envSettings.META_TITLE,
             htmlAttrs: {
                 lang: 'ja'
             },
