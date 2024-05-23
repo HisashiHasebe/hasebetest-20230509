@@ -47,9 +47,9 @@ jobs:
         run: npm ci
 
       - name: Generate
-        run: |
-          export NODE_ENV=development
-          npm run generate
+        env:
+          NODE_ENV: development
+        run: npm run generate
       - name: Zip artifact for upload
         run: cd ./.output/public && zip ../../dist.zip . -r
       - name: Archive Production Artifact
@@ -94,9 +94,9 @@ jobs:
         run: npm ci
 
       - name: Generate
-        run: |
-          export NODE_ENV=development
-          npm run generate
+        env:
+          NODE_ENV: development
+        run: npm run generate
       - name: Zip artifact for upload
         run: cd ./.output/public && zip ../../dist.zip . -r
       - name: Archive Production Artifact
