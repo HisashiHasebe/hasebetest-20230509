@@ -48,7 +48,7 @@ jobs:
 
       - name: Generate
         run: |
-          export NODE_ENV=production
+          export NODE_ENV=develop
           npm run generate
       - name: Zip artifact for upload
         run: cd ./.output/public && zip ../../dist.zip . -r
@@ -95,7 +95,7 @@ jobs:
 
       - name: Generate
         run: |
-          export NODE_ENV=production
+          export NODE_ENV=develop
           npm run generate
       - name: Zip artifact for upload
         run: cd ./.output/public && zip ../../dist.zip . -r
