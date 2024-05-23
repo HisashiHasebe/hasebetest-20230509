@@ -3,11 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "cross-env NODE_ENV=development nuxt build",
+    "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "cross-env NODE_ENV=development nuxt generate",
-    "build-prod": "cross-env NODE_ENV=production nuxt build",
-    "generate-prod": "cross-env NODE_ENV=production nuxt generate",
+    "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "prepare": "husky"
