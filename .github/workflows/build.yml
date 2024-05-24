@@ -7,6 +7,9 @@ on:
     types: [created, edited]
   workflow_dispatch:
 
+env:
+  APP_ENV: production
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -45,9 +48,7 @@ jobs:
         run: npm ci
 
       - name: Generate
-        run: |
-          export NODE_ENV=production
-          npm run generate
+        run: npm run generate
       - name: Zip artifact for upload
         run: cd ./.output/public && zip ../../dist.zip . -r
       - name: Archive Production Artifact
@@ -90,9 +91,7 @@ jobs:
         run: npm ci
 
       - name: Generate
-        run: |
-          export NODE_ENV=production
-          npm run generate
+        run: npm run generate
       - name: Zip artifact for upload
         run: cd ./.output/public && zip ../../dist.zip . -r
       - name: Archive Production Artifact

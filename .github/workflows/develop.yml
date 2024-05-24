@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 env:
-  PJ_ENV: development
+  APP_ENV: development
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

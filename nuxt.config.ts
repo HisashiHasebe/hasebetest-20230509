@@ -1,4 +1,4 @@
-const environment = process.env.PJ_ENV;
+const environment = process.env.APP_ENV;
 const envSettings = require(`./env.${environment}.js`); 
 
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify';
